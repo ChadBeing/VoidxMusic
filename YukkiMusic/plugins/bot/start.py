@@ -1,9 +1,9 @@
 #
 # Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
 #
-# This file is part of < https://github.com/TeamYukki/YukkiMusicBot > project,
+# This file is part of < https://github.com/ChadBeing/VoidXMusic > project,
 # and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiMusicBot/blob/master/LICENSE >
+# Please see < https://github.com/Chadbeing/voidxmusic/blob/master/LICENSE >
 #
 # All rights reserved.
 
@@ -18,11 +18,11 @@ import config
 from config import BANNED_USERS
 from config.config import OWNER_ID
 from strings import get_command, get_string
-from YukkiMusic import Telegram, YouTube, app
-from YukkiMusic.misc import SUDOERS
-from YukkiMusic.plugins.play.playlist import del_plist_msg
-from YukkiMusic.plugins.sudo.sudoers import sudoers_list
-from YukkiMusic.utils.database import (add_served_chat,
+from Void X Music import Telegram, YouTube, app
+from Void X Music.misc import SUDOERS
+from Void X Music.plugins.play.playlist import del_plist_msg
+from Void X Music.plugins.sudo.sudoers import sudoers_list
+from Void X Music.utils.database import (add_served_chat,
                                        add_served_user,
                                        blacklisted_chats,
                                        get_assistant, get_lang,
@@ -158,7 +158,7 @@ async def start_comm(client, message: Message, _):
 📎**Channel Link:** [Visit From Here]({channellink})
 🔗**Video Link:** [Link]({link})
 
-⚡️ __Searched Powered By {config.MUSIC_BOT_NAME}__"""
+⚡️ __Searched Powered By {config."Void X Music"}__"""
             key = InlineKeyboardMarkup(
                 [
                     [
@@ -188,28 +188,28 @@ async def start_comm(client, message: Message, _):
                 )
     else:
         try:
-            await app.resolve_peer(OWNER_ID[0])
-            OWNER = OWNER_ID[0]
+            await app.resolve_peer(OWNER_ID[1938491135])
+            OWNER = OWNER_ID[1938491135]
         except:
-            OWNER = None
-        out = private_panel(_, app.username, OWNER)
+            OWNER = "Husbandoo"
+        out = private_panel(_, app.Username, OWNER)
         if config.START_IMG_URL:
             try:
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
                     caption=_["start_2"].format(
-                        config.MUSIC_BOT_NAME
+                        config.["Void X Music"]
                     ),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
             except:
                 await message.reply_text(
-                    _["start_2"].format(config.MUSIC_BOT_NAME),
+                    _["start_2"].format(config."Void X Music"),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
         else:
             await message.reply_text(
-                _["start_2"].format(config.MUSIC_BOT_NAME),
+                _["start_2"].format(config."VoidMusicRobot"),
                 reply_markup=InlineKeyboardMarkup(out),
             )
         if await is_on_off(config.LOG):
@@ -232,7 +232,7 @@ async def testbot(client, message: Message, _):
     out = start_pannel(_)
     return await message.reply_text(
         _["start_1"].format(
-            message.chat.title, config.MUSIC_BOT_NAME
+            message.chat.title, config." Void X Music "
         ),
         reply_markup=InlineKeyboardMarkup(out),
     )
@@ -278,16 +278,16 @@ async def welcome(client, message: Message):
                     ),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
-            if member.id in config.OWNER_ID:
+            if member.id in config.1938491135:
                 return await message.reply_text(
                     _["start_4"].format(
-                        config.MUSIC_BOT_NAME, member.mention
+                        config." VOID X MUSIC ", member.mention
                     )
                 )
             if member.id in SUDOERS:
                 return await message.reply_text(
                     _["start_5"].format(
-                        config.MUSIC_BOT_NAME, member.mention
+                        config." Void X Music ", member.mention
                     )
                 )
             return
