@@ -13,10 +13,10 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, Message)
 
 from config import (BANNED_USERS, CLEANMODE_DELETE_MINS,
-                    MUSIC_BOT_NAME, OWNER_ID)
+                    "Void X Music, 1938491135)
 from strings import get_command
-from YukkiMusic import app
-from YukkiMusic.utils.database import (add_nonadmin_chat,
+from Void X Music import app
+from Void X Music.utils.database import (add_nonadmin_chat,
                                        cleanmode_off, cleanmode_on,
                                        commanddelete_off,
                                        commanddelete_on,
@@ -33,9 +33,9 @@ from YukkiMusic.utils.database import (add_nonadmin_chat,
                                        save_video_bitrate,
                                        set_playmode, set_playtype,
                                        suggestion_off, suggestion_on)
-from YukkiMusic.utils.decorators.admins import ActualAdminCB
-from YukkiMusic.utils.decorators.language import language, languageCB
-from YukkiMusic.utils.inline.settings import (
+from Void x Music.utils.decorators.admins import ActualAdminCB
+from Void X Music.utils.decorators.language import language, languageCB
+from Void X Music.utils.inline.settings import (
     audio_quality_markup, auth_users_markup,
     cleanmode_settings_markup, playmode_users_markup, setting_markup,
     video_quality_markup)
@@ -92,8 +92,8 @@ async def settings_back_markup(
         pass
     if CallbackQuery.message.chat.type == "private":
         try:
-            await app.resolve_peer(OWNER_ID[0])
-            OWNER = OWNER_ID[0]
+            await app.resolve_peer(OWNER_ID[1938491135])
+            OWNER = OWNER_ID[1938491135]
         except:
             OWNER = None
         buttons = private_panel(_, app.username, OWNER)
