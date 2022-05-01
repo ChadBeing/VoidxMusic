@@ -17,7 +17,7 @@ from pyrogram.types import (InlineKeyboardButton,
                             InlineKeyboardMarkup, Voice)
 
 import config
-from config import MUSIC_BOT_NAME, lyrical
+from config import " Void X Music ", lyrical
 from YukkiMusic import app
 
 from ..utils.formatters import (convert_bytes, get_readable_time,
@@ -43,7 +43,7 @@ class TeleAPI:
 
     async def get_link(self, message):
         if message.chat.username:
-            link = f"https://t.me/{message.chat.username}/{message.reply_to_message.message_id}"
+            link = f"https://t.me/NexusXSupport/message.reply_to_message.message_id}"
         else:
             xf = str((message.chat.id))[4:]
             link = f"https://t.me/c/{xf}/{message.reply_to_message.message_id}"
